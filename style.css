@@ -1,0 +1,263 @@
+/*
+Theme Name: formidable
+Theme URI: https://kingfisher.design/
+Description: Child WordPress theme.
+Author: Phil Clayton
+Author URI: https://kingfisher.design/
+Template: oceanwp
+Version: 1.0
+*/
+
+/* Parent stylesheet should be loaded from functions.php not using @import */
+
+a:focus {
+    outline: none !important;
+}
+
+.progress {
+    background: rgba(0, 0, 0, 0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    padding: 0 5px;
+    display: flex;
+    height: 40px;
+    width: 100%;
+}
+
+.progress-value {
+    animation: load 3s normal forwards;
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #e03c83;
+    height: 30px;
+    width: 0;
+}
+
+@keyframes load {
+    0% {
+        width: 0;
+    }
+}
+
+.frm_style_formidable-style.with_frm_style input[readonly],
+.with_frm_style input[readonly] {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+    padding-left: 0 !important;
+  }
+
+  .cm-form-spacer {
+    height: 10px !important;
+    width: 100% !important;
+  }
+
+/***** MEDIA QUERIES ****/
+
+@media (max-width: 767px) { 
+
+}
+/**** Formidable Accordion Tweaking ****/
+
+.frm_button_submit {
+    text-transform: none !important;
+}
+/*
+.with_frm_style .frm_submit {
+    margin-left: 2.8% !important;
+}
+*/
+
+.ui-accordion {
+    width: 100% !important;
+}
+
+.ui-accordion .ui-accordion-content {
+    padding: 20px 0 0 0 !important;
+}
+
+.ui-accordion .ui-accordion-header,
+.ui-accordion .ui-accordion-content {
+    border-radius: 0;
+}
+
+.ui-accordion-header,
+.ui-accordion-header.ui-state-active {
+    background: none !important;
+    border: none !important;
+}
+
+.frm_style_accordion.with_frm_style .frm_repeat_sec {
+    border-bottom: none !important;
+}
+
+.ui-widget-content {
+    border: none !important;
+    color: #222222 !important;
+    background: #ffffff !important;
+}
+
+select.ui-datepicker-month,
+select.ui-datepicker-year {
+    color: #222222 !important;
+}
+
+.ui-accordion .ui-accordion-header .ui-icon {
+    left: 0 !important;
+}
+.accordion-title-text {
+    margin-left: 20px !important;
+}
+
+.frm_style_formidable-style.with_frm_style .frm_repeat_sec {
+    margin-bottom: 0px !important;
+    margin-top: 0px !important;
+}
+
+.frm_style_formidable-style.with_frm_style .frm-show-form .frm_section_heading h3 {
+    padding: 10px 10px 10px 0 !important;
+}
+
+.frm_style_formidable-style.with_frm_style .frm-show-form .frm_pos_top h3 {
+    background: none !important;
+}
+
+/**** Datepicker ****/
+
+.ui-datepicker-calendar th span {
+    color: #fff !important;
+}
+
+.frm_dropzone .dz-message {
+    border: none !important;
+}
+
+/**** Formidable Ordering ****/
+
+div.sortable { 
+    border: thin solid #999;	
+    padding: 4px; 
+    color:#eee;
+    cursor: move;
+    padding-top: 20px
+}
+
+.ui-sortable-helper {
+   border-style: dashed !important;
+}
+
+/**** Draggable ****/
+
+.rownumbers {
+    font-size: 12px;
+    font-weight: bold;
+    width: 22px;
+    text-align: center;
+    color: #474747;
+    z-index: 2;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    background: #fff;
+}	
+
+.frm_style_formidable-style.with_frm_style .frm_repeat_sec.draggable {
+    margin-bottom: 10px !important;
+    padding: 10px !important;
+}
+
+.sortableContainer {
+    cursor: move !important;
+}
+
+
+/**** Flat Style Button ****/
+
+.frm_checkbox,
+.frm_radio {
+    margin-left: 0px;
+    margin-bottom: 15px !important;
+}
+
+.frm_checkbox label,
+.frm_radio label {
+    height: 25px;
+    position: relative;
+    padding: 0 0 0 25px !important;
+    text-indent: 10px !important;
+    margin-bottom: 0;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.frm_checkbox input[type=checkbox],
+.frm_radio input[type=radio] {
+    position: absolute !important;
+    margin-left: -9999px;
+    visibility: hidden;
+}
+
+/* Hide the browser's default checkbox */
+.frm_checkbox label input[type=checkbox],
+.frm_radio label input[type=radio]{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.frm_checkbox span,
+.frm_radio span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.frm_checkbox label:hover input[type=checkbox] ~ span,
+.frm_radio label:hover input[type=radio] ~ span{
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.frm_checkbox label input[type=checkbox]:checked ~ span,
+.frm_radio label input[type=radio]:checked ~ span{
+  background-color: #e03c83;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.frm_checkbox span:after,
+.frm_radio span:after{
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.frm_checkbox label input[type=checkbox]:checked ~ span:after,
+.frm_radio label input[type=radio]:checked ~ span:after{
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.frm_checkbox label span:after,
+.frm_radio label span:after{
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

@@ -3,6 +3,8 @@ var FF_AFTERNOON_TEA_TIME_FIELD_KEY = "soglr";
 
 var FF_AFTERNOON_TEA_SLOT_BOOKING_MAX = 2;
 
+var SHOW_SLOTS_AVAILABLE_BELOW = 3;
+
 jQuery(function ($) {
   var dateField = $("#field_" + FF_AFTERNOON_TEA_DATE_FIELD_KEY);
   var timeField = $("#field_" + FF_AFTERNOON_TEA_TIME_FIELD_KEY);
@@ -36,8 +38,13 @@ jQuery(function ($) {
             var bookingsForTimeSlot = bookedDates[date].times[time];
             time = convert24To12(time);
             var option = timeField.find('option[value="' + time + '"]')[0];
-            option.innerText =
-              option.value + " (" + bookingsForTimeSlot + " remaining)";
+
+            // Only show available bookings when lower than the constant SHOW_SLOTS_AVAILABLE_BELOW
+            if (bookingsForTimeSlot <= SHOW_SLOTS_AVAILABLE_BELOW) {
+              option.innerText =
+                option.value + " (" + bookingsForTimeSlot + " remaining)";
+            }
+
             if (bookingsForTimeSlot === 0) {
               option.disabled = "disabled";
             }

@@ -81,7 +81,7 @@ function after_entry_created($entry_id, $form_id)
 /** Blackout Booked Afternoon Tea Dates **/
 
 define('FF_FORM_AFTERNOON_TEA_KEY', 'afternoonteas');
-define('FF_AFTERNOON_TEA_DATE_FIELD_KEY', 'csubj');
+define('FF_AFTERNOON_TEA_DATE_FIELD_KEY', 'afternoontea-date');
 define('FF_AFTERNOON_TEA_TIME_FIELD_KEY', 'soglr');
 define('FF_AFTERNOON_TEA_DAY_BOOKING_MAX', 3); // change to 25 after testing
 define('FF_AFTERNOON_TEA_SLOT_BOOKING_MAX', 2); // change to ?? after testing

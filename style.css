@@ -261,3 +261,8 @@ div.sortable {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+/** Hide fully qualified date (used by JavaScript) */
+.dataTablePrintPDF tr > :nth-child(2) {
+  display: none;
+}

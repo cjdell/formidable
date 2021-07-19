@@ -4,7 +4,8 @@ var minDate, maxDate;
 jQuery.fn.dataTable.ext.search.push(function (settings, data, dataIndex) {
   var min = minDate.val();
   var max = maxDate.val();
-  var date = new Date((new Date()).getFullYear() + " " + data[1]); // TODO: Massive hack!!! Will always assume current year. Will BREAK around December time.
+  // var date = new Date((new Date()).getFullYear() + " " + data[1]); // TODO: Massive hack!!! Will always assume current year. Will BREAK around December time.
+  var date = new Date(data[1]);
 
   if (min) {
     // Make max inclusive

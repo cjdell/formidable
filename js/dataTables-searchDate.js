@@ -31,6 +31,7 @@ jQuery(function ($) {
   var table = $("table.dataTablePrintPDF").DataTable({
     responsive: true,
     stateSave: true,
+    colReorder: true,
     dom: "Bfrtip",
     order: [[1, "desc"]],
     buttons: [{ extend: "print" }, { extend: "pdfHtml5" }],

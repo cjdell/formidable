@@ -1,5 +1,5 @@
 var FF_AFTERNOON_TEA_DATE_FIELD_KEY = "afternoontea-date";
-var FF_AFTERNOON_TEA_TIME_FIELD_KEY = "soglr";
+var FF_AFTERNOON_TEA_TIME_FIELD_KEY = "afternoontea-time";
 
 var FF_AFTERNOON_TEA_SLOT_BOOKING_MAX = 2;
 

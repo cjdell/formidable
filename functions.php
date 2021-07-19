@@ -36,9 +36,13 @@ function formidable_enqueue_parent_style()
 	wp_enqueue_script('DataTables-searchDate-js', get_stylesheet_directory_uri() . '/js/dataTables-searchDate.js', ['DataTables-js']);
     wp_enqueue_style('DataTables_Styles-css', 'https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css');
 	wp_enqueue_style('DataTables-calendar-css', 'https://cdn.datatables.net/datetime/1.1.0/css/dataTables.dateTime.min.css');
+	wp_enqueue_style('DataTablesResponsive-css', 'https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css');
+	wp_enqueue_style('DataTablesColReorder-css', 'https://cdn.datatables.net/colreorder/1.5.4/css/colReorder.dataTables.min.css');
     wp_enqueue_script('DataTables-js', 'https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js', ['jquery']);
+	wp_enqueue_script('DataTableResponsive-js', 'https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js', ['DataTables-js']);
     wp_enqueue_script('DataTableButtonsPrint-js', 'https://cdn.datatables.net/buttons/1.6.4/js/buttons.print.min.js', ['DataTables-js']);
     wp_enqueue_script('DataTableButtons-js', 'https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js', ['DataTables-js']);
+	wp_enqueue_script('DataTableColReorder-js', 'https://cdn.datatables.net/colreorder/1.5.4/js/dataTables.colReorder.min.js', ['DataTables-js']);
     wp_enqueue_script('HTML5Buttons-js', 'https://cdn.datatables.net/buttons/1.6.4/js/buttons.html5.min.js');
     wp_enqueue_script('JsZip-js', 'https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js');
     wp_enqueue_script('PdfMake-js', 'https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js');
